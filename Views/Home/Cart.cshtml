@@ -1,0 +1,61 @@
+﻿@model GameStoreASP_Net.Models.Carts
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/cart.css?v=@DateTime.Now.Millisecond">
+    <title>Game Store - корзина</title>
+</head>
+<body>
+    <div class="logo">
+        <div>
+            <a href="@Url.Action("Store", "Home")"><img class="image" src="~/media/images/logo.png"></a>
+        </div>
+    </div>
+
+    <div class="main">
+        @if (Model.CartLines.Count == 0){
+            <div class="basket__empty">
+                <p>
+                    <b class="font__size__max">Ваша корзина пуста</b><br>
+                    Выберите что-нибудь из каталога.
+                </p>
+            </div>
+        }
+        else{
+            <div class="title__cart">
+                <p class="title__cart__p">Ваша корзина: </p>
+            </div>
+            @for(int i = 0; i < Model.CartLines.Count; i++){
+                <div class="item">
+                    <div class="one-row">
+                        <img class="image__game" src="@Url.Content(Model.CartLines[i].ImageGame)" alt="@Model.CartLines[i].ImageGame" />
+                        <div class="about__game">
+                            <p>@Model.CartLines[i].NameGame</p>
+                            <p class="text_game">@Model.CartLines[i].GameDescription</p>
+                        </div>
+                    </div>
+                    <div class="two-row"><a class="delete__item" href="/Home/RemoveFromCart?Number=@i">Убрать</a> </div>
+                </div>
+            }
+        }
+    </div>
+    <footer class="footer">
+        <div class="line"></div>
+        <div class="footer__content">
+            <div class="languages">
+                <p class="indent_middle">Язык: </p>
+                <a class="indent link__color__grey" href="#">Русский</a>
+                <a class="indent link__color__grey" href="#">Английский</a>
+            </div>
+            <div class="Currency">
+                <p class="indent_middle">Валюта: </p>
+                <a class="indent link__color__grey" href="#">RUB</a>
+                <a class="indent link__color__grey" href="#">USD</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

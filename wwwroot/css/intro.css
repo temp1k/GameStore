@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+}
+
+.logo{
+    background-color: black;
+    height: 14vh;
+    line-height: 100px;
+    text-align: center;
+}
+
+.image{
+    height: 12vh;
+    width: auto;
+    margin-top: 1vh;
+}
+
+.main{
+    height: 86vh;
+    background-image: url("../media/images/Intro_persons.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    padding: 3% 5%;
+    background-color: #000;
+    opacity: .9;
+}
+
+.greeting_line{
+    color: #d8e5e5;
+    font-size: 50px;
+    margin: 0% 0% 5% 0%;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.butt { 
+    text-decoration: none;
+    text-align: center;
+    background-color: #fcee0a;
+    color: #0e0e0e;
+    padding: 2% 5%;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 1;
+    width: auto;
+    margin: 0% 2%;  
+}
+
+.butt:hover {
+    background-color: #00f0ff;
+    opacity: 0.8;
+}

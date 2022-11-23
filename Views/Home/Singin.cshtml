@@ -1,0 +1,53 @@
+﻿@model GameStoreASP_Net.Models.LoginModel
+@{
+    Layout = null;
+}
+<form asp-action="singin" asp-controller="home" asp-antiforgery="true">
+    <html lang="en">
+    <head>
+        <link rel="stylesheet" href="~/css/singin.css?v=@DateTime.Now.Millisecond">
+        <link rel="stylesheet" href="~/css/registation.css?v=@DateTime.Now.Millisecond">
+        <title>Game Store</title>
+        <script>
+            // When the user clicks on <div>, open the popup
+            function myFunction() {
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("show");
+            }
+        </script>
+    </head>
+    <body>
+        <fieldset>
+        <div class="main">
+            <header>
+                <div class="header">
+                    <div class="header__logo">
+                        <a href="@Url.Action("Index", "Home")"><img class="logo" src="~/media/images/logo.png" alt="Logo"></a>
+                    </div>
+                </div>
+            </header>
+            <div class="container2">
+                <div class="login">
+                    <label>Введите логин или почту: </label>
+                    <input asp-for="@Model.Login" minlength="8" class="input" placeholder="Enter login or email" name="Login" value="" />
+                    <span asp-validation-for="Login"></span>
+
+                    <label>Введите пароль: </label>
+                        <input asp-for="@Model.Password" minlegnth="8" class="input" type="password" placeholder="Enter password" name="Password" value="" />
+                    <span asp-validation-for="Password"></span>
+
+                </div>
+                <div class="wrapper">
+                    <button type="submit" class="button">Войти</button>
+                    <a href="@Url.Action("Index", "Home")" class="button">Назад</a>
+                </div>
+                <div class="popup" onclick="myFunction()">
+                    Forgot your password?
+                    <span class="popuptext" id="myPopup">Забыли пароль? Вот незадача. Но ничего страшного. На этот сайт не требуется авторизация)))</span>
+                </div>
+            </div>
+        </div>
+        </fieldset>
+    </body>
+</html>
+</form>

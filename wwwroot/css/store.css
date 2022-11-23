@@ -1,0 +1,126 @@
+body{
+    margin:0;
+    background-color: #111214;
+    color: white;
+}
+
+.menu{
+    background-color: #01295a;
+    height: 12vh;
+    position: fixed;
+    z-index: 1;
+    top: 0.5vh;
+    width: 100%;
+}
+
+.a__logo{
+    margin-left: 5%;
+}
+
+.logo{
+    height: 12vh;
+    width: auto;
+    margin: auto;
+}
+
+.menu__container {
+    height: auto;
+    width: 100%;
+    padding-top: 0px;
+    display: inline;
+}
+
+.menu-tray {
+    margin: auto 0px;
+    display: flex;
+    float: right;
+    margin-right:3vw;
+    padding-top: 5px;
+}
+
+.profile{
+    margin-right: 5vh;
+}
+
+.image__profile{
+    max-height: 12vh;
+    width: 90%;
+    border-radius:100%;
+}
+
+.basket{
+    margin-right: 5vh;
+}
+
+.img__basket{
+    max-height: 12vh;
+    width: 90%;
+    border-radius:55%;
+}
+
+.main{
+    margin-top: 15vh;
+    position: static;
+    padding: 10vh 15vw;
+}
+
+.content__container{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5vh;
+    font-size: 16px;
+    border-radius: 5%;
+    border: 4px solid;
+    border-color: #232e42;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: auto 6vh;
+    background-color: #3a3e41;
+}
+
+.game__img{
+    height: 250px;
+    width: auto;
+    margin: auto;
+}
+
+.game__text_div{
+    position: relative; 
+}
+
+.game__text{
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    margin: auto;
+
+}
+
+.a__price{
+    margin: auto;
+    width: 7em;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 1vh;
+    background-color: #57dc4d;
+    border: 2px solid #232e42;
+    color: #403c73;
+    font-size: 20px;
+    border-radius: 10%;
+    transition: 1s linear;
+}
+
+.a__price:hover{
+    color: #fff; /* Цвет текста */
+    background: hsl(10, 78%, 51%); /* Цвет фона */
+}
+
+.a__price .comment { display: none; }
+.a__price:hover .replies { display: none; }
+.a__price:hover .comment { display: inline; }

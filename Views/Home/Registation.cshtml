@@ -1,0 +1,41 @@
+﻿@model GameStoreASP_Net.Models.User
+@{
+    Layout = null;
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/css/registation.css?v=@DateTime.Now.Millisecond">
+    <title>Game Store</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="header__logo">
+                <a href="@Url.Action("Index", "Home")"><img class="logo" src="~/media/images/logo.png"></a>
+            </div>
+            <div class="container_img">
+                <a href="#"><img class="img_setting" src="~/media/images/setting_image.png"></a>
+            </div>
+        </div>
+    </header>
+    <form asp-action="registation" asp-controller="home">
+        <div class="container">
+            <div class="login">
+                <label asp-for="LoginUser">Введите логин:  </label>
+                <input asp-for="LoginUser" class="input" placeholder="Enter login" name="LoginUser" id="login" value="" />
+                <span asp-validation-for="LoginUser"></span>
+                <label asp-for="PasswordUser">Введите пароль: </label>
+                <input class="input" type="password" asp-for="PasswordUser" placeholder="Enter password" id="password" name="PasswordUser" value="" />
+                <span asp-validation-for="PasswordUser"></span>
+                <label>Повторите пароль: </label>
+                <input class="input" type="password" placeholder="Repeat password" name="checkpass" value="" />
+                <input type="submit" class="btn" value="Register" />
+            </div>
+            <div class="signin">
+                <p>Already have an account? <a href="@Url.Action("Singin", "Home")">Sing in</a>.</p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    background-color: #111214;
+    color: white;
+}
+
+p {
+    margin: 0;
+}
+
+.logo {
+    background-color: #01295a;
+    height: 14vh;
+    line-height: 100px;
+    text-align: center;
+}
+
+.image {
+    height: 12vh;
+    width: auto;
+    margin-top: 1vh;
+}
+
+.main {
+    width: auto;
+    position: static;
+    padding: 0 25vw;
+    text-align: center;
+}
+
+.title__cart {
+    color: #c5ee0f;
+    font-size: 3em;
+    margin: 1vh 0 4vh 0;
+    text-align: center;
+}
+
+
+.basket__empty {
+    font-size: 20px;
+    display: inline-block;
+    text-align: center;
+    margin: 30vh 0;
+}
+
+    .basket__empty p {
+        width: 100%;
+        height: 50%;
+        margin: auto;
+        line-height: 1.5em;
+    }
+
+.font__size__max {
+    font-size: 30px;
+}
+
+.item {
+    padding: 10px;
+    padding-bottom: 1vh;
+    padding-right: 0;
+    border-radius: 5%;
+    border: 4px solid;
+    border-color: #232e42;
+    background-color: #3a3e41;
+    margin-bottom: 5vh;
+}
+
+.one-row {
+    margin: auto;
+    font-size: 16px;
+    display: flex;
+    word-break: break-all;
+    text-align: center;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: auto 6vh;
+}
+
+.image__game {
+    width: 20%;
+}
+
+.about__game {
+    margin: auto;
+    width: 70%;
+    margin: 0, 0, 0, 0;
+    margin-left: 4%;
+}
+
+.text_game {
+    display: block;
+}
+
+.two-row {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 1vh;
+}
+
+.delete__item {
+    text-decoration: none;
+    padding: 8px;
+    color: #000000;
+    background-color: #e81c1c;
+    border: 2px solid #232e42;
+    font-size: 18px;
+    border-radius: 10%;
+    margin: auto;
+}
+
+    .delete__item:hover {
+        background-color: #3a3e41;
+        border: 2px solid #e81c1c;
+    }
+
+.footer {
+    width: 100%;
+    position: absolute;
+}
+
+.line {
+    border: 5px solid #232e42;
+}
+
+.footer__content {
+    padding: 1vh 0 2vh 10%;
+}
+
+.languages {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.Currency {
+    display: flex;
+}
+
+.indent {
+    margin: 0 5px;
+}
+
+.indent_middle {
+    margin: 0 20px;
+}
+
+.link__color__grey {
+    color: #232e42;
+    text-decoration: none;
+}
+
+.link__color__grey:hover {
+    color: #6d1d72;
+}

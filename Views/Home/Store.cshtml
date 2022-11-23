@@ -1,0 +1,40 @@
+﻿@model IEnumerable<GameStoreASP_Net.Models.Game>;
+@{
+    Layout = null;
+}
+    <html lang="en">
+    <head>
+        <link rel="stylesheet" href="/css/store.css?v=@DateTime.Now.Millisecond">
+        <title>Game Store</title>
+    </head>
+    <body>
+    <form asp-action="store" asp-controller="home" enctype="multipart/form-data">
+        <nav class="menu">
+            <div class="menu__container">
+                <a href="@Url.Action("Index", "Home")" class="a__logo"><img class="logo" src="~/media/images/logo.png" alt="Вернуться"></a>
+                <div class="menu-tray">
+                    <div class="profile">
+                        <a href="#"><img class="image__profile" src="~/media/images/default_photo_profile.png" alt="Profile"></a>
+                    </div>
+                    <div class="basket">
+                        <a href="@Url.Action("Cart", "Home")"><img class="img__basket" src="~/media/images/basket_icon.png"></a>
+                    </div>
+                    <a class="settings" href="#"><img class="" src="~/media/images/setting_image.png" alt="Настройки"></a>
+                </div>
+            </div>
+        </nav>
+        <div class="main">
+            @foreach(var item in Model){
+                <div class="content__container">
+                    <img class="game__img" src=@Url.Content(@item.ImageGame) alt=@item.NameGame>
+                    <div class="game__text_div"><p class="game__text">@item.GameDescription</div>
+                    <a class="a__price" href="/Home/AddToCart?ID=@item.IdGame">
+                        <span class="replies">@item.Price рублей</span>
+                        <span class="comment">Add to Cart</span>
+                    </a>
+                </div>
+            }
+        </div>
+    </form>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+<form asp-action="index" asp-controller="home">
+    <html lang="en">
+    <head>
+        <meta charset="UTF-9">
+        <link rel="stylesheet" href="~/css/intro.css?v=@DateTime.Now.Millisecond">
+        <title>Steam Store</title>
+    </head>
+    <body>
+        <div class="logo">
+            <img class="image" src="~/media/images/logo.png">
+        </div>
+        <div class="main">
+            <div class="container">
+                <div class="greeting_line">
+                    Добро пожаловать в мир игр!
+                </div>
+                <div class="buttons">
+                    <a class="butt" href="@Url.Action("Singin", "Home")">Войти</a>
+                    <a class="butt" href="@Url.Action("Registation", "Home")">Регистрация</a>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    </html>
+</form>
+@*<a asp-action="Create">Добавить пользователя</a>
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.LoginUser</td>
+            <td>
+                <a asp-action="Details" asp-controller="Home" asp-route-id="@item.IdUser">Подробнее</a> |
+                <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.IdUser">Изменить</a> |
+                <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.IdUser">Удалить</a>
+            </td>
+        </tr>
+    }
+</table>*@
